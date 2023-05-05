@@ -1,0 +1,9 @@
+.slds-button_neutral {
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.25rem;
+}

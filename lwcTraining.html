@@ -1,0 +1,37 @@
+<template>
+    <lightning-accordion allow-multiple-sections-open>
+        <lightning-accordion-section name="profile" label="Profile Information" onsectiontoggle={handleSectionToggle}>
+            <p>
+                Name: {name}
+                <button onclick={changeName}>Change Name</button>
+            </p>
+            <p>
+                Email: {email}
+                <button onclick={changeEmail}>Change Email</button>
+            </p>
+            <p>
+                Phone: {phone}
+                <button onclick={changePhone}>Change Phone</button>
+            </p>
+        </lightning-accordion-section>
+        <lightning-accordion-section name="orders" label="Order History" onsectiontoggle={handleSectionToggle}>
+            {orders.length > 0 ? (
+                <ul>
+                    {orders.map(order => (
+                        <li key={order.id}>
+                            {order.name} - {order.amount}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>You have no orders.</p>
+            )}
+        </lightning-accordion-section>
+        <lightning-accordion-section name="settings" label="Account Settings" onsectiontoggle={handleSectionToggle}>
+            <p>
+                Change password, email preferences, and other settings here.
+                <button onclick={resetSettings}>Reset Settings</button>
+            </p>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>
