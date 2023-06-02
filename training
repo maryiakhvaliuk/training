@@ -1,9 +1,5 @@
 <template>
-    <lightning-accordion allow-multiple-sections-open>
-        <lightning-accordion-section name="profile" label="Profile Information" onsectiontoggle={handleSectionToggle}>
-            <p>
-                Name: {name}
-                <button onclick={changeName}>Change Name</button>
+  >Change Name</button>
             </p>
             <p>
                 Email: {email}
